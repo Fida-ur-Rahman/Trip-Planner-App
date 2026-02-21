@@ -1,11 +1,11 @@
-# ✈️ Trip Planner App
+#  Trip Planner App
 
 A simple and interactive Trip Planner application built using **HTML, CSS, and JavaScript**.  
 This app helps users organize travel destinations and manage trip details easily.
 
 ---
 
-## 🚀 Features
+##  Features
 
 - ➕ Add travel destinations
 - 🗑️ Delete trip plans
