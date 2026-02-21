@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Planner App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-plane1"></i> Trip Planner</h1>
+            <p>Plan your trips, save destinations, and check weather forecasts</p>
+        </header>
+        
+        <div class="app-container">
+            <section class="form-section">
+                <h2><i class="fas fa-plus-circle"></i> Add New Trip</h2>
+                <div class="error" id="form-error"></div>
+                <form id="trip-form">
+                    <div class="form-group">
+                        <label for="destination"><i class="fas fa-map-marker-alt"></i> Destination</label>
+                        <input type="text" id="destination" placeholder="Enter city or country" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="start-date"><i class="fas fa-calendar-alt"></i> Start Date</label>
+                        <input type="date" id="start-date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="end-date"><i class="fas fa-calendar-alt"></i> End Date</label>
+                        <input type="date" id="end-date" required>
+                    </div>
+                    
+                    <button type="submit" class="add-btn" id="add-trip-btn">
+                        <i class="fas fa-plus"></i> Add Trip & Get Weather
+                    </button>
+                </form>
+                
+                <div class="weather-info" id="current-weather" style="display: none;">
+                    <h3><i class="fas fa-cloud-sun"></i> Current Weather</h3>
+                    <div id="weather-details"></div>
+                </div>
+            </section>
+            
+            <section class="trips-section">
+                <h2><i class="fas fa-suitcase-rolling"></i> Saved Trips</h2>
+                <div class="trips-list" id="trips-list">
+                    <div class="loading" id="loading-trips">
+                        <i class="fas fa-spinner fa-spin"></i> Loading trips...
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <footer>
+            <p>Trip Planner App &copy; 2026 | Uses JSONPlaceholder for weather simulation | Data saved in LocalStorage</p>
+        </footer>
+    </div>
+</body>
+<script src="./app.js"></script>
+</html>
